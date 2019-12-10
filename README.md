@@ -47,4 +47,3 @@ import { Button } from "@kpn-style/react";
 
 <Button>KPN</Button>;
 ```
-
