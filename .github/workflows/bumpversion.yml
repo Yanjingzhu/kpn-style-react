@@ -18,12 +18,11 @@ jobs:
         git config --local user.email "weide-zhou@outlook.com"
         git config --local user.name "weide-zhou"
         git pull origin master --tags
-        git tag v0.20.06
-        git push --tags
+        git tag v0.20.07
 
 
-#    - name: Push changes
-#      uses: Woile/github-push-action@master
-#      with:
-#        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-#        tags: "true"
+    - name: Push changes
+      uses: Woile/github-push-action@master
+      with:
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        tags: "true"
