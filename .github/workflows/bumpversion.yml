@@ -43,6 +43,7 @@ jobs:
         # cz bump --yes
         # List tags
         git tag
+        git push
     - name: Push changes
       uses: Woile/github-push-action@master
       with:
