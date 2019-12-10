@@ -1,6 +1,9 @@
 name: Bump version
 
-on: [release]
+on: 
+  release:
+    types:
+      - created
   
   
 jobs:
@@ -42,10 +45,10 @@ jobs:
         # cz bump --yes
         # List tags
         git tag
-        git push --tags
 
-#    - name: Push changes
- #     uses: Woile/github-push-action@master
-  #    with:
-   #     github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    #    tags: "true"
+
+    - name: Push changes
+      uses: Woile/github-push-action@master
+      with:
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        tags: "true"
