@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     branches: 
-      - ref/tags/*
+      - refs/tags/*
 
 jobs:
   build:
