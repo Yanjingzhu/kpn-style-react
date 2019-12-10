@@ -4,7 +4,7 @@
   ],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "0.18.36",
+  "version": "0.18.37",
   "command": {
     "version": {
       "message": "bump: new version %s",
