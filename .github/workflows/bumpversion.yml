@@ -32,7 +32,7 @@ jobs:
     - name: Configure repo
       run: |
         git config --local user.email "weide-zhou@outlook.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.name "weide-zhou"
         git pull origin master --tags
     - name: Create bump
       run: |
@@ -44,14 +44,10 @@ jobs:
         # cz bump --yes
         # List tags
         git tag
+        git push --tags
 
-    - name: Push changes
-      uses: Woile/github-push-action@master
-      with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        tags: "true"
-
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
+#    - name: Push changes
+ #     uses: Woile/github-push-action@master
+  #    with:
+   #     github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    #    tags: "true"
