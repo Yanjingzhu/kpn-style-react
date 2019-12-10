@@ -1,9 +1,8 @@
 name: Bump version
 
 on: 
-  release:
-    types:
-      - created
+  push:
+    branches: master
   
   
 jobs:
@@ -13,42 +12,18 @@ jobs:
     - uses: actions/checkout@master
       with:
         ref: master
-    # - name: Set up Python 3
-    #   uses: actions/setup-python@v1
-    #   with:
-    #     python-version: '3.x'
-    - name: Set up NodeJS
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Global deps
-      run: |
-        yarn global add lerna
-    - name: Clean
-      run: |
-        yarn run clean
-    - name: Install dependencies
-      run: |
-        HUSKY_SKIP_INSTALL=1 yarn bootstrap
+
     - name: Configure repo
       run: |
         git config --local user.email "weide-zhou@outlook.com"
         git config --local user.name "weide-zhou"
         git pull origin master --tags
-    - name: Create bump
-      run: |
-        # Bump and create changelog
-        npx lerna version --no-push --no-commit-hooks --conventional-commits --yes
-
-        # cz bump --files-only
-        # yarn run changelog
-        # cz bump --yes
-        # List tags
-        git tag
+        git tag v0.20.06
+        git push --tags
 
 
-    - name: Push changes
-      uses: Woile/github-push-action@master
-      with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        tags: "true"
+#    - name: Push changes
+#      uses: Woile/github-push-action@master
+#      with:
+#        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+#        tags: "true"
