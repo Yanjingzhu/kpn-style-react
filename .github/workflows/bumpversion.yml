@@ -1,6 +1,6 @@
 name: Bump version
 
-on: [gollum]
+on: [release]
   
 jobs:
   build:
