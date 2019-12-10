@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.24 (2019-12-10)
+
+**Note:** Version bump only for package @kpn-style/react
+
+
+
+
+
 ## 0.18.23 (2019-12-10)
 
 **Note:** Version bump only for package @kpn-style/react
