@@ -30,7 +30,7 @@ jobs:
         HUSKY_SKIP_INSTALL=1 yarn bootstrap
     - name: Configure repo
       run: |
-        git config --local user.email "action@github.com"
+        git config --local user.email "weide-zhou@outlook.com"
         git config --local user.name "GitHub Action"
         git pull origin master --tags
     - name: Create bump
