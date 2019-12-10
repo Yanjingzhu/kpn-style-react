@@ -39,8 +39,9 @@ jobs:
         # cz bump --yes
         # List tags
         git tag
-    - name: Push changes
-      uses: Woile/github-push-action@master
-      with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        tags: "true"
+        git push --tags
+  #  - name: Push changes
+  #    uses: Woile/github-push-action@master
+  #    with:
+  #      github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+  #      tags: "true"
