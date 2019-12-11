@@ -33,7 +33,7 @@ jobs:
       run: |
         git config --local user.email "weide-zhou@outlook.com"
         git config --local user.name "weide-zhou"
-        git remote set-url origin https://test:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        git remote set-url origin https://test:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
         git pull origin master --tags
     - name: Create bump
       run: |
